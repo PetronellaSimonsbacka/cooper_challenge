@@ -4,6 +4,10 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('CooperController', function() {
+
+})
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {

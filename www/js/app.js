@@ -41,16 +41,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
   // Each tab has its own nav history stack:
+  .state('tab.cooper', {
+    url: '/cooper',
+    views: {
+      'tab-cooper': {
+        templateUrl: 'templates/calculator/calculator.html',
+        controller: 'CooperController'
+      }
+    }
+  })
 
   .state('tab.about', {
-  url: '/about',
-  views: {
-    'tab-about': {
-      templateUrl: 'templates/about/about.html',
-      controller: 'AboutController'
+    url: '/about',
+    views: {
+      'tab-about': {
+        templateUrl: 'templates/about/about.html',
+        controller: 'AboutController'
+      }
     }
-  }
-})
+  })
 
   .state('tab.dash', {
     url: '/dash',
@@ -90,6 +99,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   });
+
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
